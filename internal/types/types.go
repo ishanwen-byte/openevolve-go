@@ -31,10 +31,12 @@ type Island struct {
 
 // MAPGrid represents the MAP-Elites grid for quality-diversity
 type MAPGrid struct {
-	Dimensions []string          `json:"dimensions"`
-	Resolution map[string]int    `json:"resolution"`
-	Bounds     map[string][2]float64 `json:"bounds"`
-	Cells      map[string]*Program `json:"cells"`
+	Dimensions  []string          `json:"dimensions"`
+	Resolution  map[string]int    `json:"resolution"`
+	Bounds      map[string][2]float64 `json:"bounds"`
+	Cells       map[string]*Program `json:"cells"`
+	TotalCells  int               `json:"total_cells"`
+	FilledCells int               `json:"filled_cells"`
 }
 
 // EvaluationResult represents the result of program evaluation
