@@ -512,3 +512,10 @@ func (db *ProgramDatabase) GetStats() types.EvolutionStats {
 
 	return stats
 }
+
+// GetCurrentIsland returns the current island ID
+func (db *ProgramDatabase) GetCurrentIsland() int {
+	db.mu.RLock()
+	defer db.mu.RUnlock()
+	return db.currentIsland
+}
